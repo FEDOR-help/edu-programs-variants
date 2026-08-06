@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОбразОнлайн — готовые образовательные программы для учебных центров</title>
+<meta name="description" content="Готовые комплекты образовательных программ по Приказу № 534: программа ПО, методичка, тесты, КОМ. От 4 500 ₽. Автовыдача после оплаты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fefce8;--surface:#ffffff;--text:#3a3410;--muted:#93884f;--primary:#ca8a04;--accent:#dc2626}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.15}
+a{text-decoration:none;color:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(0,0,0,.07)}
+.nav .logo{font-family:'Montserrat',sans-serif;font-weight:800;font-size:21px;color:var(--primary)}
+.nav .links{display:flex;gap:26px;align-items:center}
+.nav .links a{color:#475569;font-weight:500}
+.nav .links a:hover{color:var(--primary)}
+.nav .cta{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff!important;padding:9px 20px;border-radius:50px;font-weight:600}
+.hero{background:#3f2d05;color:#fff}
+.hero h1{margin-bottom:22px}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:8px 20px;border-radius:50px;font-size:13px;margin-bottom:22px}
+.hero p{opacity:.94}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:15px 30px;border-radius:50px;font-weight:600;display:inline-block;font-size:16px;border:none;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff}
+.btn.ghost{background:rgba(255,255,255,.14);color:inherit;border:1px solid rgba(255,255,255,.3)}
+section{padding:76px 40px;max-width:1200px;margin:0 auto}
+.sec-title{font-size:36px;text-align:center;margin-bottom:14px}
+.sec-sub{font-size:17px;color:var(--muted);text-align:center;margin-bottom:44px}
+.catalog{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:26px}
+.card{background:var(--surface);border:1px solid #e2e8f0;border-radius:20px;padding:26px;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+.card .code{align-self:flex-start;background:#eef2ff;color:#4f46e5;font-size:12px;font-weight:600;padding:5px 12px;border-radius:50px;margin-bottom:12px}
+.card h3{font-size:22px;margin-bottom:10px}
+.card .status{align-self:flex-start;font-size:12px;padding:4px 12px;border-radius:50px;margin-bottom:14px;background:#dcfce7;color:#15803d}
+.card ul{list-style:none;margin-bottom:16px;font-size:15px;color:#475569}
+.card ul li{padding:5px 0 5px 24px;position:relative}
+.card ul li:before{content:"\2713";position:absolute;left:0;color:#16a34a;font-weight:700}
+.card .row{margin-top:auto;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e2e8f0;padding-top:16px}
+.card .price{font-size:26px;font-weight:800;color:var(--primary)}
+.card .pick{background:var(--primary);color:#fff;border:none;padding:10px 18px;border-radius:50px;font-weight:600;cursor:pointer}
+.bundle{background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:28px;color:#fff;padding:48px;display:flex;gap:36px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.bundle h3{font-size:30px;margin-bottom:10px}
+.bundle ul{list-style:none;margin-top:8px}
+.bundle li{padding:4px 0;opacity:.93}
+.bprice{font-size:44px;font-weight:800}
+.bprice small{font-size:16px;opacity:.85;display:block;font-weight:400}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px}
+.step{background:var(--surface);border:1px solid #e2e8f0;border-radius:18px;padding:26px;position:relative}
+.step .n{position:absolute;top:-18px;left:22px;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:800;font-size:19px;display:flex;align-items:center;justify-content:center}
+.step h4{margin:12px 0 8px}
+.step p{font-size:15px;color:#475569}
+.form-wrap{background:var(--surface);border-radius:26px;box-shadow:0 10px 40px rgba(0,0,0,.08);padding:44px;max-width:740px;margin:0 auto}
+.form-wrap h3{font-size:28px;text-align:center;margin-bottom:8px}
+.form-wrap .sub{color:var(--muted);text-align:center;margin-bottom:26px}
+.tb{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:16px}
+.tb h4{margin-bottom:4px}
+.tb h4 span{font-size:13px;color:var(--muted);font-weight:500}
+label{font-size:14px;font-weight:600;color:#334155;display:block;margin:10px 0 6px}
+input,textarea{width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:15px;font-family:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--primary)}
+.rrow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.btn-sub{width:100%;text-align:center;margin-top:8px}
+.hint{font-size:13px;color:var(--muted);margin-top:12px}
+.faq{max-width:820px;margin:0 auto}
+.faq-item{background:var(--surface);border:1px solid #e2e8f0;border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq-item summary{padding:18px 22px;font-weight:600;cursor:pointer;list-style:none}
+.faq-item p{padding:0 22px 18px;color:#475569}
+footer{background:#3f2d05;color:#94a3b8;padding:46px 40px;text-align:center}
+footer b{color:#fff}
+.msg{display:none;text-align:center;padding:14px;border-radius:12px;margin-top:14px;font-weight:600}
+.msg.ok{background:#dcfce7;color:#15803d}
+.msg.err{background:#fee2e2;color:#b91c1c}
+@media(max-width:768px){.nav{padding:12px 18px}.nav .links{display:none}section{padding:56px 18px}.rrow{grid-template-columns:1fr}.hero{padding:110px 18px 60px}}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+.js .crd:nth-child(2){transition-delay:.08s}.js .crd:nth-child(3){transition-delay:.16s}.js .crd:nth-child(4){transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.js .rv{opacity:1;transform:none}}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:130px 40px 80px}
+.hero .hwrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.1}
+.hero .side{position:relative;z-index:2;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:28px;backdrop-filter:blur(8px)}
+.hero .side h3{margin-bottom:14px;font-size:20px}
+.hero .side ul{list-style:none}
+.hero .side li{padding:9px 0 9px 26px;position:relative;opacity:.95}
+.hero .side li:before{content:"\2713";position:absolute;left:0;color:#dc2626;font-weight:700}
+.hero-points{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}
+.point{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px}
+.point b{display:block;font-size:18px;margin-bottom:3px}
+.point span{font-size:13px;opacity:.85}
+</style>
+</head><body>
+<div class="nav"><div class="logo">ОбразОнлайн</div><div class="links"><a href="#catalog">Каталог</a><a href="#how">Как это работает</a><a href="#pricing">Цены</a><a href="#faq">FAQ</a><a class="cta" href="#form">Оставить заявку</a></div></div>
+<div class="hero"><div class="hwrap"><div class="badge">Для учебных центров · соответствует Приказу № 534 и Приказу № 266</div><h1>Готовые комплекты образовательных программ для учебных центров</h1><p>Полный пакет материалов и документов по профессии: Программа ПО, Методическое пособие, Методичка «вопросы-ответы», Контрольно-оценочные материалы, плакаты и Тесты. Всё создаётся конкретно под вашу организацию. Автовыдача файлов после оплаты.</p><div class="hero-cta"><a href="#form" class="btn primary cta">Заказать комплект</a><a href="#catalog" class="btn ghost">Смотреть каталог</a></div><div class="hero-points"><div class="point"><b>5 000+ профессий</b><span>по Перечню Приказа № 534</span></div><div class="point"><b>ПО · ДПО · ДО · Курсы</b><span>все виды обучения</span></div><div class="point"><b>4 500 ₽</b><span>комплект, от 17 900 ₽ пакет из 5</span></div><div class="point"><b>Автовыдача</b><span>файлы после оплаты на e-mail</span></div></div></div><div class="side">
+  <h3>Что входит в комплект</h3>
+  <ul>
+    <li>Программа профессионального обучения</li>
+    <li>Методическое пособие</li>
+    <li>Методичка «вопросы-ответы»</li>
+    <li>Контрольно-оценочные материалы</li>
+    <li>Плакаты и тест для экзамена</li>
+  </ul>
+</div></div>
+<section id="form" class="rv"><div class="form-wrap"><h3>Заявка на комплекты программ</h3><p class="sub">Выберите виды обучения и укажите нужные направления — пришлём счёт и комплекты на e-mail. Вопросы по телефону +7 923 216 77 72.</p><form id="orderForm"><div class="tb"><h4>ПО <span>Профессиональное обучение</span></h4><label>Название (профессия, должность, направление)</label><input type="text" data-blk="ПО" placeholder="Например: Стропальщик, 80 часов"><div class="hint">Выбор из Перечня Приказа № 534 (5 100+ профессий) — просто укажите профессию.</div></div><div class="tb"><h4>ДПО <span>Дополнительное проф. образование</span></h4><label>Название</label><input type="text" data-blk="ДПО" placeholder="Повышение квалификации специалиста по охране труда"></div><div class="tb"><h4>ДО <span>Дополнительное образование</span></h4><label>Название</label><input type="text" data-blk="ДО" placeholder="Дополнительная общеразвивающая программа"></div><div class="tb"><h4>Курсы</h4><label>Название</label><input type="text" data-blk="Курсы" placeholder="Технический минимум, семинар, тренинг"></div><div class="rrow"><div><label>Организация *</label><input type="text" id="org" required placeholder="ООО «Учебный центр»"></div><div><label>E-mail *</label><input type="email" id="email" required placeholder="mail@centr.ru"></div></div><div class="rrow"><div><label>ИНН</label><input type="text" id="inn" placeholder="1234567890"></div><div><label>Контактное лицо</label><input type="text" id="contact" placeholder="ФИО"></div></div><label>Комментарий</label><textarea id="comment" rows="3" placeholder="Дополнительные пожелания, объём часов, документы для лицензирования"></textarea><button type="submit" class="btn primary btn-sub">Отправить заявку</button><div class="msg" id="msg"></div><p class="hint">Отправляя форму, вы соглашаетесь с обработкой персональных данных.</p></form></div></section><section id="catalog" class="rv"><h2 class="sec-title">Что мы готовим</h2><p class="sec-sub">Готовые комплекты документов под все виды обучения: ПО, ДПО, ДО и курсы.</p><div class="catalog"><div class="card crd"><span class="code">Профессиональное обучение</span><h3>ПО</h3><span class="status">5 100+ профессий по Приказу № 534</span><ul><li>Подготовка / переподготовка / повышение квалификации рабочих</li><li>Программа ПО, методическое пособие, КОМ, тесты</li><li>Любая профессия из Перечня № 534</li></ul><div class="row"><div class="price">от 4 500 ₽</div><button class="pick" data-t="ПО">Выбрать</button></div></div><div class="card crd"><span class="code">Дополнительное профессиональное образование</span><h3>ДПО</h3><span class="status">Под заказ</span><ul><li>Профессиональная переподготовка</li><li>Повышение квалификации специалистов</li><li>По актуальным требованиям (Приказ № 266)</li></ul><div class="row"><div class="price">от 4 500 ₽</div><button class="pick" data-t="ДПО">Выбрать</button></div></div><div class="card crd"><span class="code">Дополнительное образование</span><h3>ДО</h3><span class="status">Под заказ</span><ul><li>Дополнительные общеразвивающие программы</li><li>Дополнительные предпрофессиональные программы</li><li>Для детей и взрослых</li></ul><div class="row"><div class="price">от 4 500 ₽</div><button class="pick" data-t="ДО">Выбрать</button></div></div><div class="card crd"><span class="code">Курсы</span><h3>Курсы</h3><span class="status">Под заказ</span><ul><li>Краткосрочные обучающие курсы</li><li>Семинары, тренинги, стажировки</li><li>Технический минимум и другие направления</li></ul><div class="row"><div class="price">от 4 500 ₽</div><button class="pick" data-t="Курсы">Выбрать</button></div></div></div></section><section id="how" class="rv"><h2 class="sec-title">Как это работает</h2><p class="sec-sub">Всё по письменной заявке — пришлём счёт и комплекты на e-mail, ответим на вопросы по телефону</p><div class="steps"><div class="step"><div class="n">1</div><h4>Заявка</h4><p>Выбираете виды обучения, нужные направления и заполняете форму: название организации, ИНН, e-mail.</p></div><div class="step"><div class="n">2</div><h4>Оплата</h4><p>Счёт для юрлица или оплата картой онлайн. Автоматическое подтверждение на e-mail.</p></div><div class="step"><div class="n">3</div><h4>Автовыдача</h4><p>После оплаты получаете ссылку на скачивание комплекта файлов (Яндекс.Диск).</p></div><div class="step"><div class="n">4</div><h4>Адаптация</h4><p>Комплект выдаётся с титульными данными под вашу организацию. Готов к лицензированию.</p></div></div></section><section id="pricing" class="rv"><div class="bundle"><div><h3>Пакет «Старт учебного центра» — 5 комплектов</h3><p>Любые 5 комплектов программ (ПО, ДПО, ДО или курсы) — самый ходовой набор для лицензирования и запуска обучения.</p><ul><li>5 комплектов на выбор</li><li>Все виды обучения: ПО, ДПО, ДО, курсы</li><li>Под вашу организацию</li></ul></div><div style="text-align:right"><div class="bprice">17 900 ₽ <small>вместо 22 500 ₽ (экономия 4 600 ₽)</small></div><a href="#form" class="btn primary cta" style="margin-top:18px">Заказать пакет</a></div></div></section><section id="faq" class="rv"><h2 class="sec-title">Частые вопросы</h2><div class="faq"><details class="faq-item"><summary>Что входит в комплект?</summary><p>Программа профессионального обучения (ПО) нужной длительности, методическое пособие, методичка в формате «вопросы-ответы», контрольно-оценочные материалы, плакаты и тест для экзамена.</p></details><details class="faq-item"><summary>Программы соответствуют требованиям?</summary><p>Да. Программы построены по Перечню профессий рабочих (Приказ Минпросвещения № 534), с учётом норм Закона «Об образовании» (273-ФЗ) и правил организации профобучения. Для ДПО — актуальная редакция Порядка (Приказ Минобрнауки № 266).</p></details><details class="faq-item"><summary>Как получить файлы?</summary><p>После оплаты на ваш e-mail автоматически приходит письмо со ссылкой на скачивание комплекта. Ссылка доступна 7 дней.</p></details><details class="faq-item"><summary>Можно ли по безналу для юрлица?</summary><p>Да. Выставляем счёт на ООО «КВАНТ+». После поступления оплаты высылаем файлы и закрывающие документы.</p></details><details class="faq-item"><summary>Нужной профессии нет в каталоге?</summary><p>Сделаем комплект под заказ по любой профессии из Приказа № 534 за 1–2 дня. Укажите её в комментарии к заявке.</p></details></div></section>
+<footer><b>ОбразОнлайн</b> — готовые комплекты образовательных программ для учебных центров<br><br>Продавец: ООО «КВАНТ+» · ОГРН 1151901001108 · ИНН/КПП 1901123634/190101001<br>Республика Хакасия, г. Абакан · E-mail: kvant.aa@mail.ru · Тел: +7 923 216 77 72<br><br>© 2026 ОбразОнлайн. Все права защищены.</footer>
+<script>document.documentElement.classList.add('js');
+(function(){if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.15});document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});}})();
+(function(){var nav=document.querySelector('.nav'),s=false;function f(){var n=window.scrollY>60;if(n!==s){s=n;nav.classList.toggle('scrolled',n);}}window.addEventListener('scroll',f,{passive:true});f();})();
+document.getElementById('orderForm').addEventListener('submit',function(e){e.preventDefault();var org=document.getElementById('org').value.trim(),email=document.getElementById('email').value.trim(),msg=document.getElementById('msg');if(!org||!email){msg.className='msg err';msg.textContent='Заполните обязательные поля: организация и e-mail.';msg.style.display='block';return;}var blocks=[];document.querySelectorAll('input[data-blk]').forEach(function(i){var v=i.value.trim();if(v)blocks.push(i.getAttribute('data-blk')+': '+v);});var comment='Сайт: ОбразОнлайн'+(document.getElementById('comment').value.trim()?('\n'+document.getElementById('comment').value.trim()):'');var vals={org:org,email:email,inn:document.getElementById('inn').value.trim(),contact:document.getElementById('contact').value.trim(),phone:'',comment:comment,po:blocks.filter(function(b){return b.indexOf('ПО:')===0;}).join('; '),dpo:blocks.filter(function(b){return b.indexOf('ДПО:')===0;}).join('; '),'do':blocks.filter(function(b){return b.indexOf('ДО:')===0;}).join('; '),courses:blocks.filter(function(b){return b.indexOf('Курсы:')===0;}).join('; ')};var f=document.createElement('form');f.method='POST';f.action='https://script.google.com/macros/s/AKfycbyC76Bl2zSpsTZIfDSfzoPECW7kIVwrmPGcEOMT3thmQWa4beTQJ2377Bjl3cJ26TYYAQ/exec';f.style.display='none';Object.keys(vals).forEach(function(k){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=vals[k];f.appendChild(i);});document.body.appendChild(f);f.submit();msg.className='msg ok';msg.textContent='Заявка отправлена! Пришлём счёт и ссылку на оплату на указанный e-mail.';msg.style.display='block';e.target.reset();return false;});
+</script>
+</body></html>
