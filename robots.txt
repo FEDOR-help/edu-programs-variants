@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sasha131080-cloud.github.io/edu-programs-variants/sitemap.xml
+Sitemap: https://fedor-help.github.io/edu-programs-variants/sitemap.xml
